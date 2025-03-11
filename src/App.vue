@@ -3,8 +3,8 @@ import { onMounted } from 'vue'
 import { categories } from '@/constants.ts'
 import productCard from '@/components/productCard.vue'
 import filterButton from '@/components/filterButton.vue'
-import { getWineData } from '@/store/getWineData'
-import { useInfiniteScroll } from '@/store/useInfiniteScroll'
+import { getWineData } from '@/composables/getWineData'
+import { useInfiniteScroll } from '@/composables/useInfiniteScroll'
 
 const { selectedCategory, data, hasMore, loading, getData } = getWineData()
 useInfiniteScroll(getData)
